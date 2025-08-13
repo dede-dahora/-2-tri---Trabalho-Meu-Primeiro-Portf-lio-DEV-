@@ -112,87 +112,25 @@ nav a.ativo {
 
 /* Seção habilidades */
 .habilidades {
-    margin: 40px 0;
+    margin: 120px 0;
 }
 
 .habilidades ul {
     list-style-position: inside;
-    margin-top: 20px;
+    margin-top: 90px;
 }
 
 .habilidades li {
-    margin-bottom: 10px;
-    padding-left: 10px;
-}
-
-/* Projetos */
-.projeto {
+    margin-bottom: 90px;
+    padding-left: 90px;
     display: flex;
-    flex-wrap: wrap;
-    margin: 40px 0;
-    gap: 30px;
     align-items: center;
 }
 
-.projeto img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.projeto-info {
-    flex: 1;
-    min-width: 300px;
-}
-
-/* Formulário de contato */
-.form-contato {
-    margin-top: 30px;
-    max-width: 600px;
-}
-
-.campo {
-    margin-bottom: 20px;
-}
-
-.campo label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 600;
-}
-
-.campo input,
-.campo textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid var(--cor-borda);
-    border-radius: 4px;
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-}
-
-.redes-sociais {
-    display: flex;
-    gap: 15px;
-    margin: 20px 0;
-}
-
-/* Currículo */
-.item-curriculo {
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid var(--cor-borda);
-}
-
-.item-curriculo h3 {
-    color: var(--cor-primaria);
-}
-
-.cargo, .periodo {
-    font-style: italic;
-    color: var(--cor-secundaria);
+.icone-habilidade {
+    width: 90px;
+    height: 90px;
+    margin-right: 90px;
 }
 
 /* Botões */
@@ -205,6 +143,9 @@ nav a.ativo {
     text-decoration: none;
     margin-top: 10px;
     transition: background-color 0.3s, transform 0.2s;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
 .botao:hover {
@@ -223,7 +164,7 @@ footer {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .sobre, .projeto {
+    .sobre {
         flex-direction: column;
         text-align: center;
     }
