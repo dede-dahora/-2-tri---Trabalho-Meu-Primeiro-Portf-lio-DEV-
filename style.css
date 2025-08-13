@@ -1,0 +1,242 @@
+/* Variáveis de cores */
+:root {
+    --cor-primaria: #3498db;
+    --cor-secundaria: #2980b9;
+    --cor-texto: #333;
+    --cor-fundo: #f9f9f9;
+    --cor-borda: #ddd;
+    --cor-destaque: #e74c3c;
+    --cor-texto-claro: #fff;
+}
+
+/* Tema escuro */
+[data-tema="escuro"] {
+    --cor-primaria: #2c3e50;
+    --cor-secundaria: #1a252f;
+    --cor-texto: #ecf0f1;
+    --cor-fundo: #121212;
+    --cor-borda: #444;
+    --cor-destaque: #e74c3c;
+    --cor-texto-claro: #ecf0f1;
+}
+
+/* Reset e estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    padding: 30px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Navegação */
+nav {
+    background-color: var(--cor-secundaria);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    padding: 15px 10px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--cor-primaria);
+}
+
+nav a.ativo {
+    background-color: var(--cor-primaria);
+    font-weight: bold;
+}
+
+/* Seção sobre */
+.sobre {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 40px 0;
+    gap: 30px;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--cor-primaria);
+}
+
+.apresentacao {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Seção habilidades */
+.habilidades {
+    margin: 40px 0;
+}
+
+.habilidades ul {
+    list-style-position: inside;
+    margin-top: 20px;
+}
+
+.habilidades li {
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+/* Projetos */
+.projeto {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px 0;
+    gap: 30px;
+    align-items: center;
+}
+
+.projeto img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.projeto-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Formulário de contato */
+.form-contato {
+    margin-top: 30px;
+    max-width: 600px;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 4px;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+/* Currículo */
+.item-curriculo {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.item-curriculo h3 {
+    color: var(--cor-primaria);
+}
+
+.cargo, .periodo {
+    font-style: italic;
+    color: var(--cor-secundaria);
+}
+
+/* Botões */
+.botao {
+    display: inline-block;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.botao:hover {
+    background-color: var(--cor-secundaria);
+    transform: translateY(-2px);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-claro);
+    margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sobre, .projeto {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .avatar {
+        margin-bottom: 20px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav li {
+        margin: 5px 0;
+    }
+}
